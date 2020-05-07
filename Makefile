@@ -1,8 +1,9 @@
 CFITSIOINCDIR = /usr/local/include
+CFITSIOLIBDIR = /usr/local/lib
 
 #use only with no debugging
 COPTS = -funroll-loops -O3 -ansi -Wall -I$(CFITSIOINCDIR) -I/usr/include/malloc
-LIBS  =  -lm -lcfitsio  
+LIBS  =  -lm -L$(CFITSIOLIBDIR) -lcfitsio  
 
 CC    = gcc 
 
